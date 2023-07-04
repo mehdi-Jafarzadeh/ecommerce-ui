@@ -1,0 +1,18 @@
+.nav-container{
+    background: #292929;
+    color:aliceblue;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.nav-ul{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    border: 1px solid red;
+}
+.nav-li{
+    list-style: none;
+    margin: 0 1rem;
+}
