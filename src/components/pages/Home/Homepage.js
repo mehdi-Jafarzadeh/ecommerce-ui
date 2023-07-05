@@ -14,7 +14,7 @@ const fields = [
 ]
 
 const Homepage = () => {
-    const [field, setfield] = useState("the description about the programming field");
+    const [field, setfield] = useState(null);
     return (
         <div className='home-container'>
             <div className='home-sec1'> webco programming group</div>
@@ -44,7 +44,7 @@ const Homepage = () => {
                 ))}
             </div>
             <div className='home-sec-8'><img className='home-sec-8-item' src="./assets/pages/Home/down arrow.png" alt="down arrow" /></div>
-            <div className='home-sec-8'>{fields.filter(e => e.ID == field).map(e => e.des)}</div>
+            <div className='home-sec-8'>{ field ? fields.filter(e => e.ID == field).map(e => e.des) : "the description about the programming field" }</div>
             <div className='home-sec-'></div>
             <div className='home-sec-'></div>
             <div className='home-sec-'></div>
