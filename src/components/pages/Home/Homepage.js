@@ -1,16 +1,20 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
 
-const languages = [
-    { "photo": "./assets/footer/github.png" },
-    { "photo": "./assets/footer/github.png" },
-    { "photo": "./assets/footer/github.png" },
-    { "photo": "./assets/footer/github.png" },
-    { "photo": "./assets/footer/github.png" },
-    { "photo": "./assets/footer/github.png" }
+
+
+const fields = [
+    { "ID" : 1 , "photo": "./assets/footer/github.png" , "des" : "description of the programming language number 1" },
+    { "ID" : 2 , "photo": "./assets/footer/github.png" , "des" : "description of the programming language number 2" },
+    { "ID" : 3 , "photo": "./assets/footer/github.png" , "des" : "description of the programming language number 3" },
+    { "ID" : 4 , "photo": "./assets/footer/github.png" , "des" : "description of the programming language number 4" },
+    { "ID" : 5 , "photo": "./assets/footer/github.png" , "des" : "description of the programming language number 5" },
+    { "ID" : 6 , "photo": "./assets/footer/github.png" , "des" : "description of the programming language number 6" }
 ]
 
 const Homepage = () => {
+    const [field, setfield] = useState("the description about the programming field");
     return (
         <div className='home-container'>
             <div className='home-sec1'> webco programming group</div>
@@ -33,14 +37,14 @@ const Homepage = () => {
             </div>
             <div className='home-sec-6'>what is the fields of programming ?</div>
             <div className='home-sec-7'>
-                {languages.map(e => (
+                {fields.map(e => (
                     <div className='home-sec-7-items'>
-                        <img className='home-sec-7-items' src={e.photo} alt="" />
+                        <img className='home-sec-7-items' src={e.photo} alt="" onClick={() => { setfield(e.ID) }}/>
                     </div>
                 ))}
             </div>
             <div className='home-sec-8'><img className='home-sec-8-item' src="./assets/pages/Home/down arrow.png" alt="down arrow" /></div>
-            <div className='home-sec-8'>the description about the programming field</div>
+            <div className='home-sec-8'>{fields.filter(e => e.ID == field).map(e => e.des)}</div>
             <div className='home-sec-'></div>
             <div className='home-sec-'></div>
             <div className='home-sec-'></div>
