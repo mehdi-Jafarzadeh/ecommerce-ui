@@ -1,0 +1,34 @@
+.home-container{
+    /* border: 1px solid white; */
+    width: 100%;
+}
+.home-sec1 , .home-sec2 {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+}
+.home-sec1{
+    font-size: 2.5rem;
+}
+.home-sec4{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+}
+.home-sec-4-1 , .home-sec-4-2  {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-sec-4-1-img{
+    width: 80%;
+    border-radius: 20px;
+    max-width: 300px;
+}
+.home-sec-5{
+    display: flex;
+    max-width: 300px;
+    justify-content: space-around;
+    margin: 1rem auto;
+}
