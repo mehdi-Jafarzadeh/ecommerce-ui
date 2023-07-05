@@ -22,8 +22,8 @@ function App() { return (
           <Route path="/card" element={<Card/>}/>
         </Routes>  
       </main>
-    
-      <Footer /> 
+      
+     <Footer /> 
  
      </div>
     );

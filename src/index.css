@@ -1,6 +1,12 @@
 * {
   margin: 0;
+  color: aliceblue;
+}
+.App { 
+  position: relative;
+  background: linear-gradient( rgb(58, 0, 100), rgb(27, 1, 72), rgb(1, 1, 57));
+   /* z-index: -999;  */
 }
 main {
-  margin-top: 2.7em
+  padding-block: 2.7em;
 }

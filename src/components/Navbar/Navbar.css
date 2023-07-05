@@ -1,5 +1,5 @@
 .nav-container{
-    background: #292929d3;
+    background: linear-gradient(to right, rgb(149, 0, 255), rgb(0, 0, 255), rgb(71, 71, 255));
     color:aliceblue;
     /* padding: 1em; */
     position: fixed;
