@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Homepage.css';
 
@@ -15,6 +15,18 @@ const fields = [
 
 const Homepage = () => {
     const [field, setfield] = useState(null);
+    const [data, setdata] = useState()
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/todos')
+           .then((response) => response.json())
+           .then((data) => {setdata(data)})
+     }, []);
+
+
+     console.log(typeof data) 
+     console.log(typeof fields) 
+
     return (
         <div className='home-container'>
             <div className='home-sec1'> webco programming group</div>
@@ -43,16 +55,16 @@ const Homepage = () => {
                     </div>
                 ))}
             </div>
-            <div className='home-sec-8'><img className='home-sec-8-item' src="./assets/pages/Home/down arrow.png" alt="down arrow" /></div>
-            <div className='home-sec-8'>{ field ? fields.filter(e => e.ID == field).map(e => e.des) : "the description about the programming field" }</div>
-            <div className='home-sec-'></div>
-            <div className='home-sec-'></div>
-            <div className='home-sec-'></div>
-            <div className='home-sec-'></div>
-            <div className='home-sec-'></div>
-            <div className='home-sec-'></div>
-            <div className='home-sec-'></div>
-            <div className='home-sec-'></div>
+            <div className='home-sec-8'><img className='home-sec-8-item' src="./assets/pages/Home/down arrow.png" alt="down arrow" /></div> 
+             <div className='home-sec-8'>{ field ? fields.filter(e => e.ID == field).map(e => e.des) : "the description about the programming field" }</div> 
+            <div className='home-sec-8'>{  data.filter(e => e.id == 5).map(e => e.title)}</div> 
+
+
+            {/* {  data.map(e => e.title)} */}
+            { data ? data.map(e => (<div>
+                <h3>{e.title}</h3>
+                <p>{e.id}</p>
+            </div>)) : "loading"}
             </div>
             )
 }

@@ -4,8 +4,9 @@
 }
 .App { 
   position: relative;
-  background: linear-gradient( rgb(58, 0, 100),rgb(2, 0, 100),rgb(27, 0, 100), rgb(109, 0, 160), rgb(1, 1, 57));
+  /* background: linear-gradient( rgb(58, 0, 100),rgb(2, 0, 100),rgb(27, 0, 100), rgb(109, 0, 160), rgb(1, 1, 57)); */
    /* z-index: -999;  */
+   background: #535353;
 }
 main {
   padding-block: 2.7em;
